@@ -54,49 +54,49 @@ const Navbar = () => {
             </div>
           </div>
 
-          {!bar && (
-            <div className="menuItems py-6 lg:py-0">
-              <ul className="lg:flex items-center gap-5 uppercase font-medium text-white space-y-2 lg:space-y-0">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/">CONTACT us</Link>
-                </li>
-                <li>
-                  <Link to="/">DASHBOARD</Link>
-                </li>
-                <li>
-                  <Link to="/">Our Menu</Link>
-                </li>
-                <li>
-                  <Link to="/">Our Shop</Link>
-                </li>
-                <li className="relative hidden lg:block">
-                  <Link to="/">
-                    <span>
-                      <FaCartPlus></FaCartPlus>
-                    </span>
-                    <span className="absolute -right-[15px] -top-[25px] flex items-end justify-center w-6 h-6 bg-orange-600 rounded-full">
-                      2
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/">SIGN OUT</Link>
-                </li>
-                <li className="hidden lg:block">
-                  <div className="profilePic w-12 h-12 rounded-full border-2 border-white">
-                    <img
-                      className="block w-full h-full object-cover"
-                      src={pp}
-                      alt="profile Picture"
-                    />
-                  </div>
-                </li>
-              </ul>
-            </div>
-          )}
+          <div
+            className={`menuItems py-6 lg:py-0 lg:block ${bar ? "hidden" : ""}`}
+          >
+            <ul className="lg:flex items-center gap-5 uppercase font-medium text-white space-y-2 lg:space-y-0">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/">CONTACT us</Link>
+              </li>
+              <li>
+                <Link to="/">DASHBOARD</Link>
+              </li>
+              <li>
+                <Link to="/">Our Menu</Link>
+              </li>
+              <li>
+                <Link to="/">Our Shop</Link>
+              </li>
+              <li className="relative hidden lg:block">
+                <Link to="/">
+                  <span>
+                    <FaCartPlus></FaCartPlus>
+                  </span>
+                  <span className="absolute -right-[15px] -top-[25px] flex items-end justify-center w-6 h-6 bg-orange-600 rounded-full">
+                    2
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">SIGN OUT</Link>
+              </li>
+              <li className="hidden lg:block">
+                <div className="profilePic w-12 h-12 rounded-full border-2 border-white">
+                  <img
+                    className="block w-full h-full object-cover"
+                    src={pp}
+                    alt="profile Picture"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
